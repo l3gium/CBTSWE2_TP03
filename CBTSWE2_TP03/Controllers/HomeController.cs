@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using CBTSWE2_TP03.Models;
+using CBTSWE2_TP03.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CBTSWE2_TP03.Controllers
@@ -7,18 +8,21 @@ namespace CBTSWE2_TP03.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IProdutoRepository _produtoRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IProdutoRepository produtoRepository)
         {
             _logger = logger;
+            _produtoRepository = produtoRepository;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var produtos = await _produtoRepository.GetProdutos();
+            return View(produtos);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Creditos()
         {
             return View();
         }
