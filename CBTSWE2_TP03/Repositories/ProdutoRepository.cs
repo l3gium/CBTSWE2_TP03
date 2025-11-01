@@ -2,6 +2,8 @@
 using CBTSWE2_TP03.Models;
 using Microsoft.EntityFrameworkCore;
 
+//Desenvolvido por Beatriz Bastos Borges e Miguel Luizatto Alves
+
 namespace CBTSWE2_TP03.Repositories
 {
     public class ProdutoRepository : IProdutoRepository

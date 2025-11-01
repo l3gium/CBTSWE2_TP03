@@ -1,5 +1,7 @@
 ﻿using CBTSWE2_TP03.Models;
 
+//Desenvolvido por Beatriz Bastos Borges e Miguel Luizatto Alves
+
 namespace CBTSWE2_TP03.Repositories
 {
     public interface IProdutoRepository

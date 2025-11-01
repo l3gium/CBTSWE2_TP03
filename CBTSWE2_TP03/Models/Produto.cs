@@ -1,24 +1,26 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+//Desenvolvido por Beatriz Bastos Borges e Miguel Luizatto Alves
+
 namespace CBTSWE2_TP03.Models
 {
     public class Produto
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "O nome é obrigatório")]
         [StringLength(100)]
         public string Nome { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "A descrição é obrigatória")]
         [StringLength(500)]
         public string Descricao { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "o preço é obrigatório")]
         [Range(0.01, double.MaxValue, ErrorMessage = "O preço deve ser maior que zero.")]
         public double Preco { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Á quantidade é obrigatória")]
         [Range(0, int.MaxValue, ErrorMessage = "A quantidade no estoque não pode ser negativa")]
         public int QtdEstoque { get; set; }
     }
