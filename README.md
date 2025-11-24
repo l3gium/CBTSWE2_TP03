@@ -1,1 +1,1 @@
-Clique <a href="https://www.youtube.com/watch?v=0YqHqqt6u4s">aqui</a> para ver a aplicação funcionando
+Clique <a href="https://www.youtube.com/watch?v=0YqHqqt6u4s" target="_blank">aqui</a> para ver a aplicação funcionando
